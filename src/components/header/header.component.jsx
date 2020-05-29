@@ -7,26 +7,23 @@ import { connect } from "react-redux";
 import CartIcon from "../cart-icon/cart-icon.component";
 import CartDropdown from "../cart-dropdown/cart-dropdown.component";
 
-const Header = ({ hidden }) => {
-  console.log(hidden);
-  return (
-    <div className="header">
-      <Link to="/" className="logo-container">
-        <Logo className="logo" />
+const Header = ({ hidden }) => (
+  <div className="header">
+    <Link to="/" className="logo-container">
+      <Logo className="logo" />
+    </Link>
+    <div className="options">
+      <Link className="option" to="/shop">
+        SHOP
       </Link>
-      <div className="options">
-        <Link className="option" to="/shop">
-          SHOP
-        </Link>
-        <Link className="option" to="/contact">
-          CONTACT
-        </Link>
-        <CartIcon />
-      </div>
-      {hidden ? null : <CartDropdown />}
+      <Link className="option" to="/contact">
+        CONTACT
+      </Link>
+      <CartIcon />
     </div>
-  );
-};
+    {hidden ? null : <CartDropdown />}
+  </div>
+);
 
 const mapStateToProps = ({ cart: { hidden } }) => ({ hidden });
 
