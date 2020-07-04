@@ -1,0 +1,44 @@
+.contact-form {
+  display: flex;
+  flex-flow: column;
+  background-color: white;
+  padding: 4rem 2rem;
+  padding-bottom: 3rem;
+  border-radius: 0.2rem;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+  .inputWrapper {
+    position: relative;
+    height: 5rem;
+  }
+
+  label {
+    position: absolute;
+    top: 0.3rem;
+    color: #8792a1;
+    cursor: text;
+    transition: 0.2s;
+  }
+
+  input {
+    width: 100%;
+    border: none;
+    padding-bottom: 1rem;
+    margin-bottom: 2rem;
+    border-bottom: 1px solid #d5dce3;
+  }
+
+  input:focus {
+    outline: none;
+    border-bottom: 1px solid #808080;
+  }
+
+  input:focus + label {
+    top: -1.3rem;
+    transition: 0.2s;
+  }
+
+  button {
+    background: none;
+    border: none;
+  }
+}
