@@ -16,6 +16,10 @@
   display: flex;
   justify-content: center;
 
+  &:disabled {
+    cursor: not-allowed;
+  }
+
   &:focus {
     outline: none;
   }

@@ -5,44 +5,76 @@
   padding: 4rem 2rem;
   padding-bottom: 3rem;
   box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+
   .inputWrapper {
     position: relative;
     height: 5rem;
+
+    label {
+      position: absolute;
+      top: 0;
+      color: #8792a1;
+      cursor: text;
+      transition: 0.2s;
+    }
+
+    input {
+      width: 100%;
+      border: none;
+      padding-bottom: 0.6rem;
+      margin-bottom: 2.2rem;
+      border-bottom: 1px solid #d5dce3;
+    }
+
+    input[value]:not([value=""]) + label {
+      top: -1.3rem;
+      transition: 0.2s;
+    }
+
+    input:focus {
+      outline: none;
+      border-bottom: 1px solid #808080;
+    }
+
+    input:focus + label {
+      top: -1.3rem;
+      transition: 0.2s;
+    }
+
+    input:disabled {
+      background-color: transparent;
+      color: black;
+    }
+
+    .inputError {
+      border-bottom: 1px solid #bb271a;
+    }
+
+    .inputError {
+      border-bottom: 1px solid #bb271a !important;
+    }
+
+    .inputError + label {
+      color: #bb271a;
+    }
+
+    .errorMessage {
+      position: absolute;
+      top: 1.9rem;
+      color: #bb271a;
+      font-size: 0.6rem;
+    }
   }
 
-  label {
-    position: absolute;
-    top: 0.3rem;
-    color: #8792a1;
-    cursor: text;
-    transition: 0.2s;
-  }
-
-  input {
-    width: 100%;
-    border: none;
-    padding-bottom: 1rem;
-    margin-bottom: 2rem;
-    border-bottom: 1px solid #d5dce3;
-  }
-
-  input[value]:not([value=""]) + label {
-    top: -1.3rem;
-    transition: 0.2s;
-  }
-
-  input:focus {
-    outline: none;
-    border-bottom: 1px solid #808080;
-  }
-
-  input:focus + label {
-    top: -1.3rem;
-    transition: 0.2s;
-  }
-
-  button {
-    background: none;
-    border: none;
+  .messageNotSent {
+    position: relative;
+    p {
+      position: absolute;
+      color: red;
+      margin: 0;
+      top: 0.3rem;
+      color: #bb271a;
+      font-size: 0.6rem;
+    }
   }
 }
