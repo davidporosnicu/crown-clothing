@@ -2,6 +2,7 @@ import React from "react";
 import "./contact-form.styles.scss";
 import CustomButton from "../../components/custom-button/custom-button.component";
 import { useFormik } from "formik";
+import axios from "axios";
 
 const ContactForm = () => {
   const formik = useFormik({
@@ -30,7 +31,10 @@ const ContactForm = () => {
     },
 
     onSubmit: (values, { setErrors, setSubmitting, resetForm }) => {
-      console.log(values);
+      axios
+        .post("/api/email", values)
+        .then(res => console.log(res))
+        .catch(err => console.log("err", err));
       resetForm();
     },
   });
