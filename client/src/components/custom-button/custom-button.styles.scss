@@ -16,6 +16,10 @@
   display: flex;
   justify-content: center;
 
+  &:focus {
+    outline: none;
+  }
+
   &:hover {
     background-color: white;
     color: black;

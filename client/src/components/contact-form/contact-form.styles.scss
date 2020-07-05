@@ -4,7 +4,6 @@
   background-color: white;
   padding: 4rem 2rem;
   padding-bottom: 3rem;
-  border-radius: 0.2rem;
   box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
   .inputWrapper {
     position: relative;
@@ -25,6 +24,11 @@
     padding-bottom: 1rem;
     margin-bottom: 2rem;
     border-bottom: 1px solid #d5dce3;
+  }
+
+  input[value]:not([value=""]) + label {
+    top: -1.3rem;
+    transition: 0.2s;
   }
 
   input:focus {

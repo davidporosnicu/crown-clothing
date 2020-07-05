@@ -5,8 +5,10 @@
   padding: 0 6rem;
 
   .header {
-    margin: 1rem auto;
-    margin-bottom: 6rem;
+    padding: 1rem 0 4rem 0;
+    display: flex;
+    flex-flow: column;
+    height: 100%;
 
     .title {
       text-align: center;
@@ -18,7 +20,7 @@
 
   .form {
     position: relative;
-    width: 30rem;
+    width: 26rem;
   }
 
   .background {
