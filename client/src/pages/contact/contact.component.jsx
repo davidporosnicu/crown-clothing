@@ -12,9 +12,38 @@ const ContactPage = () => {
           forward to hearing from you.
         </p>
       </div>
-      <div className="form">
+      <div className="page-content">
         <div className="background" />
-        <ContactForm />
+        <div className="form">
+          <ContactForm />
+        </div>
+        <div className="contact-info">
+          <h2>Contact Information</h2>
+          <div className="info-item">
+            <img
+              className="icon"
+              src={require("../../assets/location.svg")}
+              alt="location icon"
+            />
+            <p>Timisoara, Romania</p>
+          </div>
+          <div className="info-item">
+            <img
+              className="icon"
+              src={require("../../assets/phone.svg")}
+              alt="phone icon"
+            />
+            <p>+40 742520763</p>
+          </div>
+          <div className="info-item">
+            <img
+              className="icon"
+              src={require("../../assets/email.svg")}
+              alt="email icon"
+            />
+            <p>david94_p@yahoo.com</p>
+          </div>
+        </div>
       </div>
     </div>
   );

@@ -5,9 +5,10 @@
   padding: 0 6rem;
 
   .header {
-    padding: 1rem 0 4rem 0;
+    padding: 0 0 4rem 0;
     display: flex;
     flex-flow: column;
+
     height: 100%;
 
     .title {
@@ -18,9 +19,17 @@
     }
   }
 
+  .page-content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+  }
+
   .form {
     position: relative;
     width: 26rem;
+    margin-right: 6rem;
   }
 
   .background {
@@ -30,6 +39,22 @@
     background-color: #f7f8fc;
     z-index: -1;
     clip-path: polygon(100% 0, 100% 100%, 0 100%, 0 10%);
-    transform: translate(-10rem, -2rem);
+    transform: translate(0, 11rem);
+  }
+
+  .contact-info {
+    h2 {
+      margin-bottom: 2rem;
+    }
+
+    .info-item {
+      display: flex;
+      margin-bottom: 1.5rem;
+    }
+
+    .icon {
+      width: 1.6rem;
+      margin-right: 1.5rem;
+    }
   }
 }
